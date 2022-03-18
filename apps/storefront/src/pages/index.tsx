@@ -1,5 +1,6 @@
 import { log } from 'logger';
-import { CounterButton, NewTabLink } from 'ui';
+import { CounterButton } from 'ui';
+import Link from 'next/link';
 
 export default function Store() {
   log('Hey! This is Home.');
@@ -7,9 +8,9 @@ export default function Store() {
     <div>
       <h1>Store</h1>
       <CounterButton />
-      <NewTabLink href="https://turborepo.org/">
-        Built With TurboRepo
-      </NewTabLink>
+      <Link href="/petlist">
+        <a>Pet List</a>
+      </Link>
     </div>
   );
 }
